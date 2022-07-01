@@ -1,32 +1,68 @@
-﻿string test = "ooonkhr";
+﻿// string test = "ooonkhr";
 
-void findChar(string arg)
+// void findChar(string arg)
+// {
+//     string result =String.Empty;
+//     string o ="o";
+//     string O ="O";
+
+//     for (int i =0; i< arg.Length; i++)
+//     {
+//         if (arg[i]==o[0])
+//         {
+//             result = result+ O;
+//         }
+
+//         else
+//         {
+//             result = result+ arg[i];
+//         }
+//     }
+
+
+//     Console.WriteLine(result);
+    
+// }
+
+
+// findChar(test);
+
+// int year = DateTime.Now.Year;
+// Console.WriteLine(year);
+
+
+void sortArray(int [] arg)
 {
-    string result =String.Empty;
-    string o ="o";
-    string O ="O";
+    
 
-    for (int i =0; i< arg.Length; i++)
+    for (int i=0; i<arg.Length; i++)
     {
-        if (arg[i]==o[0])
+        int min = arg[i];
+        int count = i;
+        for (int j=i+1; j<arg.Length; j++)
         {
-            result = result+ O;
+            
+            if (min>arg[j])
+            {
+                min = arg[j];
+                count = j;
+            }
         }
+        int time = arg[i];
+        arg[i] = min;
+        arg[count] = time;
 
-        else
-        {
-            result = result+ arg[i];
-        }
+
+        
     }
 
-
-    Console.WriteLine(result);
-    
+    for (int i=0; i<arg.Length; i++)
+    {
+        Console.WriteLine(arg[i]);
+    }
+   
 }
 
+int [] array = new int [] {5,4,8,3,9,4,34,33,67,1};
 
-findChar(test);
-
-int year = DateTime.Now.Year;
-Console.WriteLine(year);
-
+sortArray(array);
