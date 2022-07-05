@@ -31,38 +31,57 @@
 // Console.WriteLine(year);
 
 
-void sortArray(int [] arg)
-{
+// void sortArray(int [] arg)
+// {
     
 
-    for (int i=0; i<arg.Length; i++)
-    {
-        int min = arg[i];
-        int count = i;
-        for (int j=i+1; j<arg.Length; j++)
-        {
+//     for (int i=0; i<arg.Length; i++)
+//     {
+//         int min = arg[i];
+//         int count = i;
+//         for (int j=i+1; j<arg.Length; j++)
+//         {
             
-            if (min>arg[j])
-            {
-                min = arg[j];
-                count = j;
-            }
-        }
-        int time = arg[i];
-        arg[i] = min;
-        arg[count] = time;
+//             if (min<arg[j])
+//             {
+//                 min = arg[j];
+//                 count = j;
+//             }
+//         }
+//         int time = arg[i];
+//         arg[i] = min;
+//         arg[count] = time;
 
 
         
-    }
+//     }
 
-    for (int i=0; i<arg.Length; i++)
-    {
-        Console.WriteLine(arg[i]);
-    }
+//     for (int i=0; i<arg.Length; i++)
+//     {
+//         Console.WriteLine(arg[i]);
+//     }
    
-}
+// }
 
-int [] array = new int [] {5,4,8,3,9,4,34,33,67,1};
+// int [] array = new int [] {5,4,8,3,9,4,34,33,67,1};
 
-sortArray(array);
+// sortArray(array);
+
+Console.Write("Input number: ");
+
+int userNum = Convert.ToInt32(Console.ReadLine());
+
+
+
+switch (userNum) {
+    case >7: Console.WriteLine("test_1");
+    break;
+
+    case <4: Console.WriteLine("test_2");
+    break;
+
+    default:
+    Console.WriteLine("test_3");
+    break;
+
+} 
