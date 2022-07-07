@@ -1,20 +1,20 @@
-﻿using System;
+﻿
+int i = 1;
+int j = 1;
+Console.WriteLine(i);
+Console.WriteLine(j);
 
-namespace project 
+
+
+
+int Fib(int i, int j)
 {
-    class Program
-    {
-        static void Main()
-        {
-            robot bot = new robot();
-            bot.name = "Bot";
-            bot.weight = 800;
-            bot.coordinates = new byte[] {0,0,0};
+    int result = i+Fib(int i_1, int j_1);
+    int i_1 = j;
+    int j_1 = result;
 
-            Console.WriteLine(bot.name + " weight: " + bot.weight);
+    return result;
 
-            robot bot = new robot();
-
-        }
-    }
 }
+
+    
